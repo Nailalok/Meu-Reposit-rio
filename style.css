@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-family: Arial;
+    color: #FFFFFF;
+}
+body{
+    overflow: hidden;
+    position: relative;
+    background-color: #040018;
+}
+.all{
+    background-color: #040018;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+    box-shadow: 1px 2px 10px 2px #00F5FF;
+}
+
+@keyframes fall {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(-100vw * var(--direction)), 100vh) scale(0);
+        opacity: 0;
+    }
+}
+
+#head{
+    margin: 15px;
+    width: 85%;
+    height: 65px;
+    border: 1px solid #00F5FF;
+    animation: animBorder1 5s infinite linear;
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    cursor: pointer;
+}
+header{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#nome{
+    color: #FFFFFF;
+    font-size: 11pt;
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.projetos{
+    margin-left: 43px;
+    display: flex;
+    flex-direction: column;
+}
+h3{
+    margin-left: -15px;
+}
+
+ul{
+    margin-top: 12px;
+}
+p{
+    margin-left: -15px;
+    font-size: 10pt;
+    margin-bottom: 10px;
+}
+#python{
+    margin-top: 12px;
+}
+#programando{
+    margin-top: 12px;
+}
+@keyframes animBorder1{
+    10%{
+        border-color: #00FFCC;
+    }
+    30%{
+        border-color: #9000FF;
+    }
+    50%{
+        border-color: #FF0054;
+    }
+    70%{
+        border-color: #00FF0E;
+    }
+    90%{
+        border-color: #0085FF;
+    }
+}
+#nome-info, #data-nascimento, #cidade, #contato, #email{
+    font-size: 11pt;
+    font-weight: 400;
+    color: #00FFF8;
+}
+#parametro{
+    font-weight: 600;
+    font-size: 12pt;
+}
+#info{
+    margin-left: 5px;
+}
+#info > div{
+    margin: 10px 0px 10px 0px;
+}
+#tec{
+    font-weight: 600;
+    font-size: 13pt;
+}
+#tecnologias{
+    font-weight: 400;
+}
+#tecnologias > ul{
+    margin-left: 10px;
+    padding: 0;
+    list-style-type: none;
+}
+#ul-tec > li{
+    color: #00FFF8;
+}
+
+@keyframes animText1{
+    10%{
+        color: #00FFCC;
+    }
+    30%{
+        color: #9000FF;
+    }
+    50%{
+        color: #FF0054;
+    }
+    70%{
+        color: #00FF0E;
+    }
+    90%{
+        color: #0085FF;
+    }
+}
+#imagem-perfil{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 15px;
+}
+#img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#redes-sociais{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    font-size: 10pt;
+}
+#redes-sociais > div{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+}
+#redes-sociais > div > a{
+    animation: animText1 5s infinite linear;
+}
+#redes-sociais > div:hover{
+    font-size: 12pt;
+}
+.sobre{
+    display: none;
+    flex-direction: column; 
+}
+.anim{
+    background: linear-gradient(160deg,  #000348, #020015);
+}
+#voltar{
+    margin: 0;
+    font-size: 30pt;
+    position: absolute;
+    margin-left: 10;
+    top: -20px;
+}
+.indo{
+    animation: 0.5s ir linear;
+}
+.voltar{
+    animation: 0.5s voltar linear;
+
+}
+@keyframes ir{
+    from{
+        right: 0;
+    }
+    to{
+        right: -100%;
+    }
+}
+@keyframes voltar{
+    from{
+        right: 0;
+    }
+    to{
+        right: 100%;
+    }
+}
+li{
+    cursor: pointer;
+}
